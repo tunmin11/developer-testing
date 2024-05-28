@@ -1,0 +1,21 @@
+version: '3.8'  
+
+services:
+  mysql:
+    image: mysql:8.0
+    restart: always
+
+    environment:
+      MYSQL_ROOT_PASSWORD: tunmin@fazWaz
+      MYSQL_DATABASE: fazWaz-realEstate
+      MYSQL_USER: admin 
+      MYSQL_PASSWORD: f@zW@Z@dmin
+
+    ports:
+      - "3306:3306"
+
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+volumes:
+  mysql_data:  # Define the data volume
